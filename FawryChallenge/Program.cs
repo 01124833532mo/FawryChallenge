@@ -34,18 +34,30 @@ namespace FawryChallenge
 
             //Console.WriteLine("\n---\n");
 
-            // Test case 2: Checkout with insufficient balance
+            //// Test case 2: Checkout with insufficient balance
+            //try
+            //{
+            //    var cart2 = new Cart();
+            //    cart2.Add(tv, 3);
+            //    checkoutService.Checkout(customer, cart2);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+
+            // Test case 3: Checkout with expired product
             try
             {
-                var cart2 = new Cart();
-                cart2.Add(tv, 3);
-                checkoutService.Checkout(customer, cart2);
+                var expiredCheese = new ShippableExpirableProduct("Expired cheese", 100, 5, 0.4, DateTime.Now.AddDays(-1));
+                var cart3 = new Cart();
+                cart3.Add(expiredCheese, 1);
+                checkoutService.Checkout(customer, cart3);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
-
 
         }
     }
