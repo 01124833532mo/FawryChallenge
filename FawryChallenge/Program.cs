@@ -46,13 +46,25 @@ namespace FawryChallenge
             //    Console.WriteLine($"Error: {ex.Message}");
             //}
 
-            // Test case 3: Checkout with expired product
+            //// Test case 3: Checkout with expired product
+            //try
+            //{
+            //    var expiredCheese = new ShippableExpirableProduct("Expired cheese", 100, 5, 0.4, DateTime.Now.AddDays(-1));
+            //    var cart3 = new Cart();
+            //    cart3.Add(expiredCheese, 1);
+            //    checkoutService.Checkout(customer, cart3);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+
+            // Test case 4: Checkout with out of stock product
             try
             {
-                var expiredCheese = new ShippableExpirableProduct("Expired cheese", 100, 5, 0.4, DateTime.Now.AddDays(-1));
-                var cart3 = new Cart();
-                cart3.Add(expiredCheese, 1);
-                checkoutService.Checkout(customer, cart3);
+                var cart4 = new Cart();
+                cart4.Add(biscuits, 10);
+                checkoutService.Checkout(customer, cart4);
             }
             catch (Exception ex)
             {
