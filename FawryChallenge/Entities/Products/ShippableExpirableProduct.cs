@@ -1,6 +1,6 @@
 ﻿using FawryChallenge.Abstractions;
 
-namespace FawryChallenge.Entities
+namespace FawryChallenge.Entities.Products
 {
     // ShippableExpirableProduct class inherits from Product and implements both IShippable and IExpirable interfaces
     // This class represents a product that can be shipped and has an expiration date.

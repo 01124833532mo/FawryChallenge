@@ -1,4 +1,4 @@
-﻿namespace FawryChallenge.Entities
+﻿namespace FawryChallenge.Entities.Products
 {
 
     // this abstract class to be an implementation for future services

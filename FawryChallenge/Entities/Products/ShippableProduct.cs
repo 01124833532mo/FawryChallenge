@@ -1,6 +1,6 @@
 ﻿using FawryChallenge.Abstractions;
 
-namespace FawryChallenge.Entities
+namespace FawryChallenge.Entities.Products
 {
     // ShippableProduct class inherits from Product and implements IShippable interface
     public class ShippableProduct : Product, IShippable

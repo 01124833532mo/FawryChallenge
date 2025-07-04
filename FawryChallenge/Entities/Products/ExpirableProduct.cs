@@ -1,6 +1,6 @@
 ﻿using FawryChallenge.Abstractions;
 
-namespace FawryChallenge.Entities
+namespace FawryChallenge.Entities.Products
 {
     // EcpirableProduct class inherits from Product and implements IExpirable interface
     public class ExpirableProduct : Product, IExpirable

@@ -1,4 +1,4 @@
-﻿namespace FawryChallenge.Entities
+﻿namespace FawryChallenge.Entities.Products
 {
     public class NonExpirableProduct : Product
     {
