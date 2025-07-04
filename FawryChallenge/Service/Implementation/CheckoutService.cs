@@ -14,7 +14,7 @@ namespace FawryChallenge.Service.Implementation
             _shippingService = shippingService;
         }
 
-        public void Checkout(Customer customer, Cart cart)
+        public void CheckoutBasket(Customer customer, Cart cart)
         {
             // Validate cart
             if (!cart.Items.Any())

@@ -22,49 +22,50 @@ namespace FawryChallenge
             var shippingService = new ShippingService();
             var checkoutService = new CheckoutService(shippingService);
 
-            //// Test case 1: Normal checkout with shippable items
+            // Test case 1: Normal checkout with shippable items
 
-            //var cart1 = new Cart();
-            //cart1.Add(cheese, 2);
-            //cart1.Add(biscuits, 1);
-            //cart1.Add(scratchCard, 1);
-            //checkoutService.Checkout(customer, cart1);
+            var cart1 = new Cart();
+            cart1.Add(cheese, 2);
+            cart1.Add(biscuits, 1);
+            cart1.Add(scratchCard, 1);
+            checkoutService.CheckoutBasket(customer, cart1);
 
 
 
-            //Console.WriteLine("\n---\n");
+            Console.WriteLine("\n---\n");
 
-            //// Test case 2: Checkout with insufficient balance
-            //try
-            //{
-            //    var cart2 = new Cart();
-            //    cart2.Add(tv, 3);
-            //    checkoutService.Checkout(customer, cart2);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error: {ex.Message}");
-            //}
+            // Test case 2: Checkout with insufficient balance
+            try
+            {
+                var cart2 = new Cart();
+                cart2.Add(tv, 3);
+                checkoutService.CheckoutBasket(customer, cart2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
 
-            //// Test case 3: Checkout with expired product
-            //try
-            //{
-            //    var expiredCheese = new ShippableExpirableProduct("Expired cheese", 100, 5, 0.4, DateTime.Now.AddDays(-1));
-            //    var cart3 = new Cart();
-            //    cart3.Add(expiredCheese, 1);
-            //    checkoutService.Checkout(customer, cart3);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error: {ex.Message}");
-            //}
+            // Test case 3: Checkout with expired product
+            try
+            {
+                var expiredCheese = new ShippableExpirableProduct("Expired cheese", 100, 5, 0.4, DateTime.Now.AddDays(-1));
+                var cart3 = new Cart();
+                cart3.Add(expiredCheese, 1);
+                checkoutService.CheckoutBasket(customer, cart3);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
 
-            // Test case 4: Checkout with out of stock product
+            //Test case 4:
+            //    Checkout with out of stock product
             try
             {
                 var cart4 = new Cart();
                 cart4.Add(biscuits, 10);
-                checkoutService.Checkout(customer, cart4);
+                checkoutService.CheckoutBasket(customer, cart4);
             }
             catch (Exception ex)
             {
