@@ -22,17 +22,17 @@ namespace FawryChallenge
             var shippingService = new ShippingService();
             var checkoutService = new CheckoutService(shippingService);
 
-            // Test case 1: Normal checkout with shippable items
+            //// Test case 1: Normal checkout with shippable items
 
-            var cart1 = new Cart();
-            cart1.Add(cheese, 2);
-            cart1.Add(biscuits, 1);
-            cart1.Add(scratchCard, 1);
-            checkoutService.Checkout(customer, cart1);
+            //var cart1 = new Cart();
+            //cart1.Add(cheese, 2);
+            //cart1.Add(biscuits, 1);
+            //cart1.Add(scratchCard, 1);
+            //checkoutService.Checkout(customer, cart1);
 
 
 
-            Console.WriteLine("\n---\n");
+            //Console.WriteLine("\n---\n");
 
             // Test case 2: Checkout with insufficient balance
             try
