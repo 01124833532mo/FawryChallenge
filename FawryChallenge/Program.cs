@@ -32,6 +32,21 @@ namespace FawryChallenge
 
 
 
+            Console.WriteLine("\n---\n");
+
+            // Test case 2: Checkout with insufficient balance
+            try
+            {
+                var cart2 = new Cart();
+                cart2.Add(tv, 3);
+                checkoutService.Checkout(customer, cart2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+
         }
     }
 }
